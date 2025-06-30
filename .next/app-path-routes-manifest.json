@@ -1,0 +1,7 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/account/page": "/account",
+  "/dashboard/page": "/dashboard",
+  "/genres/[genre]/page": "/genres/[genre]"
+}

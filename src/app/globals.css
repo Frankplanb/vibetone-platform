@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 84 100% 59%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 84 100% 59%;
+    --radius: 0.5rem;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom VIBETONE Styles */
+.hero-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d4a3e 50%, #84cc16 100%);
+}
+
+.waveform-bar {
+  background: linear-gradient(to top, #84cc16, #a3e635);
+  transition: height 0.3s ease;
+}
+
+.audio-player-bg {
+  background: rgba(39, 39, 42, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.track-card {
+  background: linear-gradient(135deg, rgba(39, 39, 42, 0.9) 0%, rgba(63, 63, 70, 0.9) 100%);
+  border: 1px solid rgba(132, 204, 22, 0.2);
+  transition: all 0.3s ease;
+}
+
+.track-card:hover {
+  border-color: rgba(132, 204, 22, 0.5);
+  box-shadow: 0 10px 30px rgba(132, 204, 22, 0.1);
+}
+
+.genre-button {
+  background: linear-gradient(135deg, #27272a 0%, #3f3f46 100%);
+  border: 1px solid rgba(132, 204, 22, 0.3);
+  transition: all 0.3s ease;
+}
+
+.genre-button:hover {
+  background: linear-gradient(135deg, #84cc16 0%, #a3e635 100%);
+  color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(132, 204, 22, 0.3);
+}
+
+.price-badge {
+  background: linear-gradient(135deg, #84cc16 0%, #a3e635 100%);
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.download-button {
+  background: linear-gradient(135deg, #1a1a1a 0%, #27272a 100%);
+  border: 1px solid #84cc16;
+  color: #84cc16;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background: linear-gradient(135deg, #84cc16 0%, #a3e635 100%);
+  color: #1a1a1a;
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(132, 204, 22, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(132, 204, 22, 0.8), 0 0 30px rgba(132, 204, 22, 0.4);
+  }
+}
+
+.playing-animation {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Slider Styles */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+  padding: 0 10px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #27272a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #84cc16;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3e635;
+}
