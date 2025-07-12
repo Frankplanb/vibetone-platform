@@ -15,11 +15,13 @@ export default function HeroSection() {
   return (
     <section className="relative w-full">
       {/* Bannerbild mit voller Sichtbarkeit */}
-      <img
-        src="/VIBETONE-WEBSEITE.png"
-        alt="Vibetone Banner"
-        className="w-full h-auto object-contain"
-      />
+    <img
+  src="/images/vibetone-banner.jpg"
+  alt="Vibetone Banner"
+  className="w-full h-auto object-contain"
+/>
+
+
 
       {/* Text-Overlay */}
       <div className="absolute left-6 bottom-6 md:left-12 md:bottom-12 z-10 bg-transparent text-white">
